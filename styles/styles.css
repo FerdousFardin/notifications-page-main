@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+:root {
+  --primary-red: hsl(1, 90%, 64%);
+  --primary-blue: hsl(219, 85%, 26%);
+  --white: hsl(0, 0%, 100%);
+  --very-light-grayish-blue: hsl(210, 60%, 98%);
+  --light-grayish-blue-1: hsl(211, 68%, 94%);
+  --light-grayish-blue-2: hsl(205, 33%, 90%);
+  --grayish-blue: hsl(219, 14%, 63%);
+  --dark-grayish-blue: hsl(219, 12%, 42%);
+  --very-dark-blue: hsl(224, 21%, 14%);
+  --font: 16px;
+  --effect: all 0.2s ease-in;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: var(--very-light-grayish-blue);
+  width: 1440px;
+  margin: 0 auto;
+}
+img {
+  display: block;
+  max-width: 100%;
+}
+input,
+button {
+  font: inherit;
+}
+p,
+h1 {
+  overflow-wrap: break-word;
+}
+main {
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+.container {
+  background: var(--white);
+  padding: 0.5rem 1rem;
+  margin: 5% 0;
+  border-radius: 1rem;
+  width: 50%;
+  box-shadow: rgba(149, 157, 165, 0.1) 0px 8px 32px;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+}
+.title h1 {
+  color: var(--very-dark-blue);
+  font-weight: 800;
+}
+.title {
+  display: flex;
+  gap: 1rem;
+}
+.badge {
+  height: 1.8rem;
+  width: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: 5px;
+  background: var(--primary-blue);
+  color: var(--white);
+}
+.markAllBtn {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: var(--dark-grayish-blue);
+  transition: var(--effect);
+}
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.content {
+  display: flex;
+  gap: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  position: relative;
+}
+.content img {
+  width: 3rem;
+  height: 3rem;
+}
+.content-unread {
+  background: var(--very-light-grayish-blue);
+}
+.content-text {
+  position: relative;
+}
+.content-text-unread::after {
+  content: "";
+  position: absolute;
+  right: -1rem;
+  transform: translateY(-50%);
+  top: 50%;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  background: var(--primary-red);
+}
+.content-of {
+  font-weight: 800;
+  color: var(--very-dark-blue);
+  transition: var(--effect);
+  cursor: pointer;
+}
+.content-of:hover,
+.content-message:hover,
+.markAllBtn:hover {
+  color: var(--primary-blue);
+}
+.content-action {
+  color: var(--dark-grayish-blue);
+}
+.content-message {
+  font-weight: 800;
+  color: var(--dark-grayish-blue);
+  cursor: pointer;
+  transition: var(--effect);
+}
+.content-time {
+  color: var(--grayish-blue);
+}
+.user-img {
+  position: absolute;
+  right: 10%;
+  top: 1rem;
+  cursor: pointer;
+}
+.private-message {
+  padding: 1rem;
+  border: 1px solid var(--light-grayish-blue-1);
+  border-radius: 5px;
+  margin: 0.5rem 0 0;
+  color: var(--dark-grayish-blue);
+  transition: var(--effect);
+  cursor: pointer;
+}
+.private-message:hover {
+  background: var(--light-grayish-blue-1);
+}
